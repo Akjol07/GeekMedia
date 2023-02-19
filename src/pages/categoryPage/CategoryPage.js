@@ -35,13 +35,13 @@ const CategoryPage = () => {
                     ?
                         <ul>
                             {
-                                articles.map(i => <li key={i.id}>
+                                articles?.results.map(i => <li key={i.id}>
                                     <span>{i.created_date_time}</span>
                                     <Link to={`/about/${i.id}`}>
                                         <p>{i.title}</p>
                                     </Link>
                                 </li>)
-                            }
+                                }
                                 < /ul>
 
                     :

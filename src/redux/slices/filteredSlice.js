@@ -4,15 +4,16 @@ import axios from "axios";
 
 const initialState = {
     filtered: {
-        articles: [],
+        articles: {
+            results: []
+        },
         load: true
     }
 }
 
 export const getArticlesByCategory = createAsyncThunk('filltered/category', async (params) => {
     const {data} = await axios.get(links.BASE_URL+"posts/", {params: params})
-    console.log(params)
-    return data?.results;
+    return data;
 })
 
 const filteredSlice = createSlice({

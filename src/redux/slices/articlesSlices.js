@@ -9,7 +9,7 @@ const initialState = {
 }
 
 export const getArticles = createAsyncThunk('articles/getArticles',  async () => {
-    const {data} = await axios.get(links.BASE_URL+"posts/")
+    const {data} = await axios.get(links.BASE_URL+"posts/?page_size=12")
     return data?.results;
 });
 

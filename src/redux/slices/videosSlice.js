@@ -3,13 +3,13 @@ import {links} from "./links";
 import axios from "axios";
 
 const initialState = {
-    videos: [],
+    videos: {count: 0},
     load: true
 }
 
-export const getVideos = createAsyncThunk('videos', async () => {
-    const {data} = await axios.get(`${links.BASE_URL}media/`)
-    return data?.results
+export const getVideos = createAsyncThunk('videos', async (params) => {
+    const {data} = await axios.get(`${links.BASE_URL}media/`, {params})
+    return data;
 })
 
 
