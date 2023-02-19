@@ -1,0 +1,54 @@
+.category {
+    margin: 50px 0;
+    min-height: 500px;
+}
+
+.category h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #216189;
+}
+
+.category ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    list-style: none;
+    margin-top: 41px;
+}
+
+
+
+.category ul li a {
+    text-decoration: none;
+}
+
+.category ul li span {
+    padding: 6px 2px;
+    background: #EBEBEB;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: #B6B6B6;
+}
+
+.category ul li a p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-top: 12px;
+}
+
+.load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.load span {
+    width: 100px !important;
+    height: 100px !important;
+}

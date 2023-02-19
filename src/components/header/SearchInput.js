@@ -9,6 +9,7 @@ const SearchInput = () => {
     const [input, setInput] = useState('')
     const [arrInp, setArrInp] = useState([])
 
+
     const handleSearch = ({target}) => {
         setInput(target.value)
         setArrInp(target.value === '' ? [] : articles.filter(i => i.title.toLowerCase().includes(target.value.toLowerCase())))
@@ -23,19 +24,15 @@ const SearchInput = () => {
     return (
         <>
             <input type="text" placeholder='Поиск' value={input} onChange={handleSearch} className={styles.input}/>
-            {
-                arrInp.length > 0
-                &&
-                <div className={styles.lists}>
-                    <ul>
-                        {
-                         arrInp.map(i => <li key={i?.id}>
-                             <Link to={`about/${i.id}`} onClick={handleClick}>{i?.title}</Link>
-                         </li>)
-                        }
-                    </ul>
-                </div>
-            }
+            <div style={arrInp.length <= 0 ? {maxHeight: 0, padding: '0 12px 0'} : {maxHeight: 176, padding: '10px 12px 21px'}} className={styles.lists}>
+                <ul>
+                    {
+                     arrInp.map(i => <li key={i?.id}>
+                         <Link to={`about/${i.id}`} onClick={handleClick}>{i?.title}</Link>
+                     </li>)
+                    }
+                </ul>
+            </div>
         </>
     );
 };

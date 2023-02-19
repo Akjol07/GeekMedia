@@ -19,7 +19,6 @@
     height: 100%;
 }
 .nav {
-    width: 488px;
     height: 100%;
 }
 
@@ -36,6 +35,7 @@
     user-select: none;
     cursor: pointer;
     font-weight: 700;
+    width: 104px;
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
@@ -70,7 +70,6 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding-right: 7px;
 }
 .arrow_link span {
     display: flex;
@@ -101,12 +100,14 @@
 .lists {
     position: absolute;
     width: 325px;
-    height: 176px;
+    max-height: 176px;
+    overflow-y: auto;
     background: #fff;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.30);
-    padding: 10px 12px 21px;
     z-index: 9;
+    transition: .5s ease-in-out;
 }
+
 .lists ul {
     height: 100%;
     overflow: auto;
@@ -147,10 +148,10 @@
     right: 0;
     list-style: none;
     width: 115px;
-    max-height: 172px;
+    max-height: max-content;
     overflow: auto;
-    padding: 4px 14px 7px;
     background: rgba(33, 97, 137, 0.92);
+    transition: .5s ease-in-out;
 }
 
 .categories li a {

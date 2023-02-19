@@ -17,21 +17,21 @@ const LeftNews = () => {
                     ?
                     <>
                         <div className={styles.mainNews}>
-                            <Link to={`about/${articles[13]?.id}`}>
-                                <img src={articles[13]?.image} alt=""/>
-                                <p>{articles[13]?.title}</p>
+                            <Link to={`about/${articles[0]?.id}`}>
+                                <img src={articles[0]?.image} alt=""/>
+                                <p>{articles[0]?.title}</p>
                             </Link>
                         </div>
                         <div className={styles.news}>
-                            <Link to={`about/${articles[12]?.id}`}>
-                                <img src={articles[12]?.image} alt=""/>
-                                <p>{articles[12]?.title}</p>
+                            <Link to={`about/${articles[1]?.id}`}>
+                                <img src={articles[1]?.image} alt=""/>
+                                <p>{articles[1]?.title}</p>
                             </Link>
                         </div>
                         <div className={styles.news}>
-                            <Link to={`about/${articles[12]?.id}`}>
-                                <img src={articles[12]?.image} alt=""/>
-                                <p>{articles[12]?.title}</p>
+                            <Link to={`about/${articles[2]?.id}`}>
+                                <img src={articles[2]?.image} alt=""/>
+                                <p>{articles[2]?.title}</p>
                             </Link>
                         </div>
                     </>

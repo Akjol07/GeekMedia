@@ -8,8 +8,9 @@ const initialState = {
 }
 
 export const getArticle = createAsyncThunk('article', async (id) => {
-    const {data} = await axios.get(`${links.BASE_URL}/${id}`)
-    return data
+    const {data} = await axios.get(`${links.BASE_URL}posts/${id}/`)
+    console.log(data);
+    return data;
 })
 
 const articleSlice = createSlice({
@@ -19,16 +20,15 @@ const articleSlice = createSlice({
         clearArticle: (state) => {
             state.article = {}
         }
-
     },
     extraReducers(building) {
         building
             .addCase(getArticle.pending, (state) => {
-                state.load = true
+                state.load = true;
             })
             .addCase(getArticle.fulfilled, (state, action) => {
                 state.article = action.payload
-                state.load = false
+                state.load = false;
             })
     }
 })

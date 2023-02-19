@@ -29,6 +29,11 @@
     color: #000000;
 }
 
+.right_news ul li a:hover {
+    transition: .4s;
+    color: #216189;
+}
+
 .load {
     display: flex;
     justify-content: center;

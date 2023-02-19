@@ -31,10 +31,10 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className={styles.footer_icons}>
-                        <a target="_blank" href="https://instagram.com/geeks__edu?igshid=YmMyMTA2M2Y=">
+                        <a target="_blank" href="https://instagram.com/geeks_edu">
                             <FooterInst/>
                         </a>
-                        <a href="">
+                        <a target="_blank" href="https://www.facebook.com/geekskg">
                             <FooterFaceBook/>
                         </a>
                         <a target="_blank" href="https://t.me/joinchat/SExl8seNzNMm6aaS">

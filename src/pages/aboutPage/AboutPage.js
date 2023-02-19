@@ -7,17 +7,15 @@ import {articleSelect, clearArticle, getArticle, loadArticleSelect} from "../../
 import {CircularProgress} from "@mui/material";
 
 const AboutPage = () => {
-    const dispatch = useDispatch()
     const {id} = useParams()
+    const dispatch = useDispatch()
     const article = useSelector(articleSelect);
     const load = useSelector(loadArticleSelect)
 
     useEffect(() => {
-        dispatch(getArticle(id))
-        return () => {
-            dispatch(clearArticle())
-        }
-    }, [id])
+        dispatch(clearArticle());
+        dispatch(getArticle(id));
+    }, [id]);
 
     return (
         <div className={styles.aboutPage}>
@@ -27,14 +25,25 @@ const AboutPage = () => {
                     ?
                     <>
                         <div className={styles.box_one}>
-                            <span className={styles.time}>{article?.id}</span>
+                            <span className={styles.time}>{article?.created_date_time}</span>
                             <p className={styles.text}>{article?.title}</p>
                         </div>
-                        <div className="box_two">
+                        <div>
                             <div className={styles.box_img}>
                                 <img src={article?.image} alt="" className={styles.img}/>
                             </div>
-                            <p className={styles.box_title}>{article?.title}</p>
+                            <p className={styles.box_title}>{article?.description}</p>
+                        </div>
+                        <div className={styles.titles}>
+                            <ul>
+                                {
+                                    article?.articles.map(i => <li key={i.id}>
+                                        <h2>{i.title}</h2>
+                                        {i.image !== null && <img src={i.image} alt=""/>}
+                                        <p>{i.description}</p>
+                                    </li>)
+                                }
+                            </ul>
                         </div>
                     </>
                     :

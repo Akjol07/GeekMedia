@@ -40,6 +40,12 @@
     line-height: 23px;
     color: #000000;
     margin-top: 15px;
+    transition: .4s;
+}
+
+.block_title:hover {
+    color: #216189;
+    transform: translateY(-15px);
 }
 
 .load {
