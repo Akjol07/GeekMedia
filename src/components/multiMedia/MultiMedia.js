@@ -21,19 +21,19 @@ const MultiMedia = () => {
                         {
                             !load
                             ?
-                                <>
-                                <ul className={styles.multi_video}>
-                                    {
-                                        videos?.results.map(i =>
-                                            <li key={i.id}>
-                                                <video width='525' height='333' src={i.media} controls></video>
-                                                <p className={styles.multi_title}>{i.title}</p>
-                                            </li>
-                                        )
-                                    }
-                                </ul>
-                                {videos.count > 4 && <Pagination page={page} onChange={(_, p) => setPage(p)} count={Math.ceil(videos?.count / 4)} color="primary"/>}
-                                </>
+                            <>
+                            <ul className={styles.multi_video}>
+                                {
+                                    videos?.results.map(i =>
+                                        <li key={i.id}>
+                                            <video width='525' height='333' src={i.media} controls></video>
+                                            <p className={styles.multi_title}>{i.title}</p>
+                                        </li>
+                                    )
+                                }
+                            </ul>
+                            {videos.count > 4 && <Pagination page={page} onChange={(_, p) => setPage(p)} count={Math.ceil(videos?.count / 4)} color="primary"/>}
+                            </>
                             :
                             <div className={styles.load}>
                                 <CircularProgress/>

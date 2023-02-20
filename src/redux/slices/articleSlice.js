@@ -9,7 +9,6 @@ const initialState = {
 
 export const getArticle = createAsyncThunk('article', async (id) => {
     const {data} = await axios.get(`${links.BASE_URL}posts/${id}/`)
-    console.log(data);
     return data;
 })
 
@@ -33,7 +32,7 @@ const articleSlice = createSlice({
     }
 })
 
-export const {clearArticle} = articleSlice.actions
 export default articleSlice.reducer;
+export const {clearArticle} = articleSlice.actions
 export const articleSelect = state => state?.article?.article
 export const loadArticleSelect = state => state?.article?.load

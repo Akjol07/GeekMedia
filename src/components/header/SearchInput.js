@@ -28,7 +28,7 @@ const SearchInput = () => {
                 <ul>
                     {
                      arrInp.map(i => <li key={i?.id}>
-                         <Link to={`about/${i.id}`} onClick={handleClick}>{i?.title}</Link>
+                         <Link to={`about/${i?.id}`} onClick={handleClick}>{i?.title}</Link>
                      </li>)
                     }
                 </ul>

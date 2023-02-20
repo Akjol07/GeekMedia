@@ -16,6 +16,7 @@ const ScrollTop = () => {
     window.onscroll = () => {
         const doc = document.documentElement.scrollTop;
         setScroll(doc >= 250);
+        console.log(doc)
     };
 
     return (

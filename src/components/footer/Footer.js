@@ -8,6 +8,14 @@ import {ReactComponent as FooterTg} from "../../media/footer/f_tg.svg";
 
 
 export default function Footer() {
+
+    const scrollTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return (
         <footer className={styles.footer}>
             <div className="container">
@@ -20,13 +28,13 @@ export default function Footer() {
                     <div className={styles.footer_news}>
                         <ul className={styles.ul}>
                             <li>
-                                <Link to='/multiMedia' className={styles.link}>МУЛЬТИМЕДИА</Link>
+                                <Link to='/multiMedia' onClick={scrollTop} className={styles.link}>МУЛЬТИМЕДИА</Link>
                             </li>
                             <li>
-                                <Link to='/' className={styles.link}>О ПРОЕКТЕ</Link>
+                                <Link to='/' onClick={scrollTop} className={styles.link}>О ПРОЕКТЕ</Link>
                             </li>
                             <li>
-                                <Link to='/' className={styles.link}>НОВОСТИ</Link>
+                                <Link to='/articles' onClick={scrollTop} className={styles.link}>НОВОСТИ</Link>
                             </li>
                         </ul>
                     </div>

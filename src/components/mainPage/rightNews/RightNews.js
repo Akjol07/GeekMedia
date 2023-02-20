@@ -22,9 +22,9 @@ const RightNews = () => {
                     </li>))
                     :
                     <>
-                        <div className={styles.load}>
-                            <CircularProgress/>
-                        </div>
+                    <div className={styles.load}>
+                        <CircularProgress/>
+                    </div>
                     </>
                 }
             </ul>

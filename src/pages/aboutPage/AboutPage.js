@@ -38,9 +38,9 @@ const AboutPage = () => {
                             <ul>
                                 {
                                     article?.articles.map(i => <li key={i.id}>
-                                        <h2>{i.title}</h2>
-                                        {i.image !== null && <img src={i.image} alt=""/>}
-                                        <p>{i.description}</p>
+                                        <h2>{i?.title}</h2>
+                                        {i?.image !== null && <img src={i?.image} alt=""/>}
+                                        <p>{i?.description}</p>
                                     </li>)
                                 }
                             </ul>

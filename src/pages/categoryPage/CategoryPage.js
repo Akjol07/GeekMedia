@@ -2,10 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from '././css/categoryPage.module.css'
 import {Link, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {
-    categoriesSelect,
-    getCategory
-} from "../../redux/slices/articlesSlices";
+import {categoriesSelect, getCategory} from "../../redux/slices/articlesSlices";
 import {CircularProgress} from "@mui/material";
 import {articlesByCategory, getArticlesByCategory} from "../../redux/slices/filteredSlice";
 
@@ -34,16 +31,15 @@ const CategoryPage = () => {
                     !load
                     ?
                         <ul>
-                            {
-                                articles?.results.map(i => <li key={i.id}>
-                                    <span>{i.created_date_time}</span>
-                                    <Link to={`/about/${i.id}`}>
-                                        <p>{i.title}</p>
-                                    </Link>
-                                </li>)
-                                }
-                                < /ul>
-
+                        {
+                        articles?.results.map(i => <li key={i.id}>
+                            <span>{i.created_date_time}</span>
+                            <Link to={`/about/${i.id}`}>
+                                <p>{i.title}</p>
+                            </Link>
+                        </li>)
+                        }
+                        < /ul>
                     :
                     <div className={styles.load}>
                         <CircularProgress/>

@@ -22,7 +22,10 @@ const ArticlesPage = () => {
         setSelectedDate(day);
     }
 
-    const clearDate = () => setSelectedDate(null);
+    const clearDate = () => {
+        setSelectedDate(null)
+        setPage(1)
+    };
 
 
 
@@ -47,28 +50,28 @@ const ArticlesPage = () => {
                     }
                     {
                         !load
-                            ?
-                            <>
-                                <ul>
-                                    {
-                                        articles?.results.map(i => <li key={i.id}>
-                                            <span className={styles.date}>{i.created_date}</span>
-                                            <Link to={`/about/${i.id}`}><p>{i.title}</p></Link>
-                                        </li>)
-                                    }
-                                </ul>
-                                {articles.count > 6 && <Pagination page={page} onChange={(_, p) => setPage(p)} count={Math.ceil(articles?.count / 6)} color="primary"/>}
-                            </>
-                            :
-                            <div className={styles.load}>
-                                <CircularProgress/>
-                            </div>
+                        ?
+                        <>
+                            <ul>
+                                {
+                                    articles?.results.map(i => <li key={i.id}>
+                                        <span className={styles.date}>{i.created_date}</span>
+                                        <Link to={`/about/${i.id}`}><p>{i.title}</p></Link>
+                                    </li>)
+                                }
+                            </ul>
+                            {articles.count > 6 && <Pagination page={page} onChange={(_, p) => setPage(p)} count={Math.ceil(articles?.count / 6)} color="primary"/>}
+                        </>
+                        :
+                        <div className={styles.load}>
+                            <CircularProgress/>
+                        </div>
                     }
                 </div>
                 <div className={styles.block_picker}>
                     <Button variant="contained" onClick={clearDate}>Все статьи</Button>
                     <DayPicker onDayClick={handleDayClick} selected={selectedDate} />
-                    {selectedDate && <p>Выбранная дата: {selectedDate.toLocaleDateString()}</p>}
+                    {selectedDate && <p className={styles.selectedDate}>Выбранная дата: {selectedDate.toLocaleDateString()}</p>}
                 </div>
             </div>
         </div>
