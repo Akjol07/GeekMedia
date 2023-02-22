@@ -6,17 +6,10 @@ import {Link} from 'react-scroll'
 const ScrollTop = () => {
     const [scroll, setScroll] = useState(false);
 
-    // const handleScroll = () => {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth'
-    //     })
-    // }
 
     window.onscroll = () => {
         const doc = document.documentElement.scrollTop;
         setScroll(doc >= 250);
-        console.log(doc)
     };
 
     return (
