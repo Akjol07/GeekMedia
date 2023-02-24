@@ -16,7 +16,7 @@ const MultiMedia = () => {
     return (
         <div className={styles.multiMedia}>
             <div className="container">
-                <h2 className={styles.title}>Мультимедиа</h2>
+                <h2 className={styles.title}>МУЛЬТИМЕДИА</h2>
                 <div className={styles.multi_videos}>
                         {
                             !load
@@ -26,7 +26,9 @@ const MultiMedia = () => {
                                 {
                                     videos?.results.map(i =>
                                         <li key={i.id}>
-                                            <video width='525' height='333' src={i.media} controls></video>
+                                            <div className={styles.video}>
+                                                <video  width='525' height='333' src={i.media} controls></video>
+                                            </div>
                                             <p className={styles.multi_title}>{i.title}</p>
                                         </li>
                                     )
@@ -36,7 +38,7 @@ const MultiMedia = () => {
                             </>
                             :
                             <div className={styles.load}>
-                                <CircularProgress/>
+                                <CircularProgress color="secondary"/>
                             </div>
                         }
                 </div>

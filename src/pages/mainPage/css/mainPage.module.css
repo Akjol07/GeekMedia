@@ -1,7 +1,9 @@
 .wrapper {
-    margin: 128px 0;
+    margin: 77px 0;
 }
 .container {
     display: flex;
     justify-content: space-between;
+    width: 1199px;
+    margin-bottom: 171px;
 }

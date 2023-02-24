@@ -149,6 +149,7 @@
     list-style: none;
     width: 115px;
     max-height: max-content;
+    z-index: 100;
     overflow: auto;
     background: rgba(33, 97, 137, 0.92);
     transition: .5s ease-in-out;

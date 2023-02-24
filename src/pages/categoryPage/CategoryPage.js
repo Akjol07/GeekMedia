@@ -26,7 +26,7 @@ const CategoryPage = () => {
     return (
         <div className={styles.category}>
             <div className="container">
-                <h2>{ruCategory}</h2>
+                <h2>{ruCategory.toUpperCase()}</h2>
                 {
                     !load
                     ?

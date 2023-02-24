@@ -19,19 +19,19 @@ const LeftNews = () => {
                         <div className={styles.mainNews}>
                             <Link to={`about/${articles[0]?.id}`}>
                                 <img src={articles[0]?.image} alt=""/>
-                                <p>{articles[0]?.title}</p>
+                                <span><p>{articles[0]?.title}</p></span>
                             </Link>
                         </div>
                         <div className={styles.news}>
                             <Link to={`about/${articles[1]?.id}`}>
                                 <img src={articles[1]?.image} alt=""/>
-                                <p>{articles[1]?.title}</p>
+                                <span><p>{articles[1]?.title}</p></span>
                             </Link>
                         </div>
                         <div className={styles.news}>
                             <Link to={`about/${articles[2]?.id}`}>
                                 <img src={articles[2]?.image} alt=""/>
-                                <p>{articles[2]?.title}</p>
+                                <span><p>{articles[2]?.title}</p></span>
                             </Link>
                         </div>
                     </>

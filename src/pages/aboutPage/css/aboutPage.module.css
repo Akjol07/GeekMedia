@@ -22,16 +22,17 @@
 }
 
 .box_img {
-    width: 976px;
+    width: 100%;
     height: 414px;
     margin-bottom: 40px;
 }
 .img {
-    width: 976px;
+    width: 100%;
     height: 414px;
 }
 
 .box_title {
+    text-align: justify;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
@@ -53,6 +54,7 @@
 }
 
 .titles ul li p {
+    text-align: justify;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;

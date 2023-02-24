@@ -66,13 +66,13 @@ export default function Header() {
                                     <Link to='/' className={styles.link}>ГЛАВНАЯ СТРАНИЦА</Link>
                                 </li>
                                 <li className={styles.arrow_link} onClick={handleOpen}>
-                                    <span className={styles.link}>{ruCategory}<Arrow style={open ? {transform: 'rotate(180deg)'} : {transform: 'rotate(0deg)'}}/></span>
+                                    <span className={styles.link}>{ruCategory.toUpperCase()}<Arrow style={open ? {transform: 'rotate(180deg)'} : {transform: 'rotate(0deg)'}}/></span>
                                     <ul style={!open ? {height: 0, padding: '0 14px 0'} : {height: 172, padding: '4px 14px 7px'}} className={styles.categories}>
                                         {
                                             open
                                             &&
                                             categories.map(i => (
-                                                <li key={i.id}><Link to={`/articles/category/${i.en_title}/`}>{i?.ru_title}</Link></li>
+                                                <li key={i.id}><Link to={`/articles/category/${i.en_title}/`}>{i?.ru_title.toUpperCase()}</Link></li>
                                             ))
                                         }
                                     </ul>
