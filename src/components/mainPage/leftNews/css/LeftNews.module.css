@@ -14,7 +14,6 @@
 .mainNews img {
     width: 751px;
     height: 365px;
-
 }
 
 .mainNews a {
@@ -69,7 +68,7 @@
 
 .news:hover p,
 .mainNews:hover p {
-    bottom: 25px;
+    bottom: 30px;
 }
 
 .news:hover a::after,

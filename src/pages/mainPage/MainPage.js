@@ -13,7 +13,6 @@ const MainPage = () => {
     useEffect(() => {
         dispatch(getArticles())
     }, [])
-
     return (
         <div className={styles.wrapper}>
             <div className={"container "+styles.container}>

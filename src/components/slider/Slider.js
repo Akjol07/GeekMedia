@@ -2,21 +2,20 @@ import React, {useEffect} from 'react';
 import styles from './css/slider.module.css'
 import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import {Pagination, Autoplay} from "swiper";
+import {Pagination, Autoplay, Navigation, Scrollbar} from "swiper";
 import {useDispatch, useSelector} from "react-redux";
 import {articlesSelect, getArticles, loadArticlesSelect} from "../../redux/slices/articlesSlices";
-import {NavLink, useParams} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {CircularProgress} from "@mui/material";
 import {ReactComponent as Instagram} from "../../media/slider/inst.svg";
 import {ReactComponent as Facebook} from "../../media/slider/faceb.svg";
 import {ReactComponent as Telegram} from "../../media/slider/tg.svg";
 
 const Slider = () => {
-    const {id} = useParams();
     const articles = useSelector(articlesSelect);
     const load = useSelector(loadArticlesSelect)
-
     const dispatch = useDispatch()
 
     const topClick = () => {
@@ -41,10 +40,12 @@ const Slider = () => {
                     autoplay={{delay: 2000, disableOnInteraction: false}}
                     spaceBetween={30}
                     slidesPerView={3}
+                    navigation
                     pagination={{
-                        clickable: true
+                        clickable: true,
+                        dynamicBullets: true
                     }}
-                    modules={[Pagination, Autoplay]}
+                    modules={[Pagination, Autoplay, Navigation]}
                 >
                     {articles.slice(0, 15).map(i => (
                         <SwiperSlide className={styles.block} key={i.id}>

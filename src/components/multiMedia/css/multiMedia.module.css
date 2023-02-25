@@ -24,7 +24,7 @@
     color: #FFFFFF;
     position: absolute;
     bottom: 36px;
-    /*max-width: 497px;*/
+    max-width: 497px;
     left: 50%;
     transform: translateX(-50%);
     transition: .3s ease-in-out;
@@ -55,8 +55,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 37px;
-    column-gap: 96px;
+    gap: 80px;
 }
 
 .multi_video li {
