@@ -15,7 +15,7 @@ const RightNews = () => {
                 {
                     !load
                     ?
-                    articles.slice(3, 9).map((i) => (
+                    articles.slice(0, 5).map((i) => (
                     <li key={i?.id}>
                         <p>{i?.created_date}</p>
                         <Link to={`about/${i?.id}`}>{i?.title}</Link>
