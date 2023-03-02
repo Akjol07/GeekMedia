@@ -18,7 +18,7 @@ const RightNews = () => {
                     articles.slice(0, 5).map((i) => (
                     <li key={i?.id}>
                         <p>{i?.created_date}</p>
-                        <Link to={`about/${i?.id}`}>{i?.title}</Link>
+                        <Link to={`about/${i?.id}`}>{i?.title.split(' ').length > 7 ? i?.title.split(' ').slice(0,7).join(' ')+'......' : i?.title}</Link>
                     </li>))
                     :
                     <>
