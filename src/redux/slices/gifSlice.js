@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const getGifs = createAsyncThunk('gifs', async () => {
-    const {data} = await axios.get(links.BASE_URL+'advertising/')
+    const {data} = await axios.get(links.BASE_URL+'reclam/')
     return data
 })
 

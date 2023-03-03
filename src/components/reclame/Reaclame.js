@@ -26,8 +26,8 @@ const Reaclame = () => {
                 !load
                 ?
                 <figure>
-                    <a target='_blank' href="https://us.coca-cola.com/">
-                        <img src={gifs[ind].video} alt=''/>
+                    <a target='_blank' href={gifs[ind]?.url}>
+                        <img src={gifs[ind]?.video} alt=''/>
                     </a>
                 </figure>
                 :

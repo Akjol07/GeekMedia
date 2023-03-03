@@ -31,7 +31,7 @@ export default function Footer() {
                                 <Link to='/multiMedia' onClick={scrollTop} className={styles.link}>МУЛЬТИМЕДИА</Link>
                             </li>
                             <li>
-                                <Link to='/' onClick={scrollTop} className={styles.link}>О ПРОЕКТЕ</Link>
+                                <Link to='/aboutProject' onClick={scrollTop} className={styles.link}>О ПРОЕКТЕ</Link>
                             </li>
                             <li>
                                 <Link to='/articles' onClick={scrollTop} className={styles.link}>НОВОСТИ</Link>

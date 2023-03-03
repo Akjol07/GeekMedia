@@ -8,7 +8,7 @@ import AboutPage from "./pages/aboutPage/AboutPage";
 import MultiMedia from "./components/multiMedia/MultiMedia";
 import CategoryPage from "./pages/categoryPage/CategoryPage";
 import ArticlesPage from "./pages/articlesPage/ArticlesPage";
-
+import AboutProject from "./pages/aboutProject/AboutProject";
 
 function App() {
   return (
@@ -18,8 +18,9 @@ function App() {
             <Route index element={<MainPage/>}/>
             <Route path="/about/:id" element={<AboutPage/>}/>
             <Route path='/multiMedia' element={<MultiMedia/>}/>
-            <Route path='/articles/category/:category' element={<CategoryPage/>}/>
             <Route path='/articles' element={<ArticlesPage/>}/>
+            <Route path='/articles/category/:category' element={<CategoryPage/>}/>
+            <Route path='/aboutProject' element={<AboutProject/>}/>
         </Routes>
         <ScrollTop/>
         <Footer/>
