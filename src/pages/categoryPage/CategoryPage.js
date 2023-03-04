@@ -28,14 +28,18 @@ const CategoryPage = () => {
             <div className="container">
                 <h2>{ruCategory.toUpperCase()}</h2>
                 {
+                    articles?.results.length === 0
+                    ?
+                    <h2 className={styles.not_found}>Новостй на эту категорию пока нет</h2>
+                    :
                     !load
                     ?
                         <ul>
                         {
                         articles?.results.map(i => <li key={i.id}>
                             <span>{i.created_date_time}</span>
-                            <Link to={`/about/${i.id}`}>
-                                <p>{i.title}</p>
+                            <Link to={`/about/${i?.id}`}>
+                                    <p>{i?.title}</p>
                             </Link>
                         </li>)
                         }

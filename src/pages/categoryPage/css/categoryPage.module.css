@@ -46,6 +46,12 @@
     color: #216189;
 }
 
+.not_found {
+    font-weight: 400 !important;
+    color: #868686EE !important;
+    margin-top: 50px;
+}
+
 .load {
     display: flex;
     justify-content: center;

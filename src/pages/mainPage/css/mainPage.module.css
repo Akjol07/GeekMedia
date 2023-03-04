@@ -1,6 +1,7 @@
 .wrapper {
-    margin: 77px 0;
+    margin: 45px 0;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
