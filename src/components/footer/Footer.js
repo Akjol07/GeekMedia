@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="container">
                 <div className={styles.footer_inner}>
                     <div className="footer_logo">
-                        <Link to='/'>
+                        <Link onClick={scrollTop} to='/'>
                             <FooterLogo/>
                         </Link>
                     </div>

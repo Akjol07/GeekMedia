@@ -53,6 +53,10 @@
     color: #004DA7;
 }
 
+.titles ul li img {
+    margin-bottom: 35px;
+}
+
 .titles ul li p {
     text-align: justify;
     font-weight: 400;
