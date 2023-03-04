@@ -12,7 +12,7 @@ const MainPage = () => {
 
     useEffect(() => {
         dispatch(getArticles())
-    }, [])
+    }, [dispatch])
     return (
         <div className={styles.wrapper}>
             <div className={"container "+styles.container}>

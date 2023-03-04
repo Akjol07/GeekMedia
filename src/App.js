@@ -19,8 +19,8 @@ function App() {
             <Route path="/about/:id" element={<AboutPage/>}/>
             <Route path='/multiMedia' element={<MultiMedia/>}/>
             <Route path='/articles' element={<ArticlesPage/>}/>
-            <Route path='/articles/category/:category' element={<CategoryPage/>}/>
             <Route path='/aboutProject' element={<AboutProject/>}/>
+            <Route path='/articles/category/:category' element={<CategoryPage/>}/>
         </Routes>
         <ScrollTop/>
         <Footer/>

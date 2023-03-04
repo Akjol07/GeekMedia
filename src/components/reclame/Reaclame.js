@@ -10,12 +10,22 @@ const Reaclame = () => {
     const [ind, setInd] = useState(0)
 
     useEffect(() => {
-        gifs.length > 1
-        &&
-        setInterval(() => {
-            ind === gifs.length - 1 ? setInd(0) : setInd(ind+1)
-        }, 1000)
-    },[])
+        const local = localStorage.getItem('gifInd');
+        if (gifs.length > 1) {
+            if (!local) {
+                localStorage.setItem('gifInd', JSON.stringify(ind))
+            } else {
+                if (JSON.parse(local) >= gifs.length - 1) {
+                    localStorage.setItem('gifInd', JSON.stringify(0))
+                    setInd(0);
+                } else {
+                    console.log(JSON.parse(local) + 1);
+                    localStorage.setItem('gifInd', JSON.stringify(JSON.parse(local) + 1));
+                    setInd(JSON.parse(local) + 1);
+                }
+            }
+        }
+    },[gifs])
 
     useEffect(() => {
         dispatch(getGifs())
