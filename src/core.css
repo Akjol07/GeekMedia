@@ -10,10 +10,6 @@
     margin: 0 auto;
 }
 
-body{
-    /*background: url("https://media.tezsat.kg/media/abc/Баннер_5.png") 50% 0 / cover no-repeat fixed;*/
-}
-
 @media screen and (max-width: 1182px){
     .container {
         width: 100% !important;

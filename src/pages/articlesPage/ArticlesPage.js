@@ -15,7 +15,6 @@ const ArticlesPage = () => {
 
     function handleDayClick(day, { selected }) {
         if (selected) {
-            // Если дата уже выбрана, отменяем выбор
             setSelectedDate(null);
             return;
         }

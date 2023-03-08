@@ -81,6 +81,9 @@
     bottom: 55px;
 }
 
+.pagination {
+    margin: 0 auto;
+}
 
 
 .load {

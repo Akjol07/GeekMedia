@@ -34,7 +34,7 @@ const MultiMedia = () => {
                                     )
                                 }
                             </ul>
-                            {videos.count > 4 && <Pagination page={page} onChange={(_, p) => setPage(p)} count={Math.ceil(videos?.count / 4)} color="primary"/>}
+                            {videos.count > 4 && <Pagination page={page} onChange={(_, p) => setPage(p)} count={Math.ceil(videos?.count / 4)} color="primary" className={styles.pagination}/>}
                             </>
                             :
                             <div className={styles.load}>
